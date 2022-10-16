@@ -49,5 +49,6 @@ def main():
                     break
             courses[course_name] = course_time
         result.append(courses)
-    print('\n+')
+        print('\n+')
+        print(course_choose)
     return result
