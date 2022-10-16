@@ -1,6 +1,4 @@
 import requests
-import eel
-@eel.expose
 def time_Generator(semester, course_subject, course_index):
     sList = semester.split("-")
     season = sList[0]
