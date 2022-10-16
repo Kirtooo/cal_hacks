@@ -1,5 +1,7 @@
 from ppp import time_Generator
+from schedule import get_result
 def main():
+    base = {}
     seasonList = ['fall', 'spring', 'summer']
     semester = input("please input semester(E.g. Fall-2022): ")
     if semester == 'quit':
@@ -47,8 +49,9 @@ def main():
                     course_time = time_Generator(semester, course_subject, course_index)
                 else:
                     break
+            base[course_name] = course_time
             courses[course_name] = course_time
-        result.append(courses)
-        print('\n+')
-        print(course_choose)
-    return result
+            result.append(courses)
+        print('\n')
+    print("Below are the possibly course selection for you: ")
+    return get_result(result, course_choose, base)
