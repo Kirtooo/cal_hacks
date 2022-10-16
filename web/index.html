@@ -6,12 +6,14 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CalScheduleHelper</title>
+    <script src="jquery/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="main">
         <div class="courseGroup">
             <h2>Course Group 1</h2>
+            <h4 id="semester1">Semester Selected: </h4>
             <h4 id="courses">Current Courses: </h4>
             <h4>Add Course Here!</h4>
             <input id="inputCourse"/>
@@ -19,6 +21,17 @@
             <button id = "deleteCourse">delete course</button>
             <button>Add Group Here!</button>
         </div>
+        <select id = "semester">
+            <option value="spring2023">spring-2023</option>
+            <option value="fall2022">fall-2022</option>
+        </select>
+        <button id = "semesterSubmit">Submit</button>
+<!--        <div class="dropdown">-->
+<!--            <button class="dropbtn">Choose Your Semester</button>-->
+<!--            <div class="dropdown-content">-->
+<!--                <button id="fall2022">fall 2022</button>-->
+<!--                <button id="spring2023">spring 2023</button>-->
+<!--            </div>-->
 <!--        <div class="schedule">-->
 <!--            <div class="schedule-rows">-->
 <!--                <button class="timeGrid">time</button>-->

@@ -1,5 +1,7 @@
 
 let courseList = [];
+let semester;
+let year;
 
 
 function buttonClicked(valueClicked) {
@@ -33,6 +35,15 @@ function setListeners() {
     deleteButton.addEventListener("click", function () {
         courseList.pop();
         document.querySelector("#courses").innerText = "Current Courses: " + courseList;
+    })
+
+    // let id = $("#semester option:checked").val();
+    let semesterButton = document.querySelector("#semesterSubmit");
+    semesterButton.addEventListener("click", function () {
+        let id = document.querySelector("select").value;
+        let name = $("#semester option:checked").text();
+        semester = "name";
+        document.querySelector("#semester1").innerText = "Semester Selected: " + name;
     })
     //Hint: addEventListener might be useful.
     //Hint: event.target.innerText might be helpful. innerText return type is a string
