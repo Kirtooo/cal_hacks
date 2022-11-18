@@ -1,10 +1,12 @@
 import requests
+import eel
+@eel.expose
 def time_Generator(semester, course_subject, course_index):
     sList = semester.split("-")
     season = sList[0]
     year = sList[1]
     url = 'https://classes.berkeley.edu/content/' + year + '-' + season + '-' + course_subject + '-' + course_index + '-001-lec-001'
-    # url = 'https://classes.berkeley.edu/content/2022-fall-compsci-61a-001-lec-001'
+    #url = 'https://classes.berkeley.edu/content/2022-fall-compsci-61a-001-lec-001'
     html = requests.get(url)
     tex = html.text
     #print(tex)
@@ -18,7 +20,7 @@ def time_Generator(semester, course_subject, course_index):
         if tex[len(meetdays[i]) + 2 : len(meetdays[i]) + 6] == "true":
             st = tex.find("startTime")
             et = tex.find("endTime")
-            time = (tex[st+12: st+20], tex[et+10: et+18])
+            time = (tex[st+12: st+22], tex[et+10: et+19])
             result[days[i]] = time
 
     i = tex.find("meetsFriday") + 17
@@ -32,7 +34,7 @@ def time_Generator(semester, course_subject, course_index):
         if z[len(meetdays[j]) + 2 : len(meetdays[j]) + 6] == "true":
             st = z.find("startTime")
             et = z.find("endTime")
-            time = (z[st+12: st+20], z[et+10: et+18])
+            time = (z[st+12: st+22], z[et+10: et+19])
             result[days[j]] = time
 
     return result
