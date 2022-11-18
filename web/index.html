@@ -11,22 +11,36 @@
 </head>
 <body>
     <div class="main">
-        <div class="courseGroup">
-            <h2>Course Group 1</h2>
-            <h4 id="semester1">Semester Selected: </h4>
-            <h4 id="courses">Current Courses: </h4>
-            <h4>Add Course Here!</h4>
-            Subject: <input type="text" id="inputSubject"/><br>
-            Course Number: <input type="text" id="inputNumber"><br>
-            <button id = "addCourse">add course</button>
-            <button id = "deleteCourse">delete course</button>
-            <button>Add Group Here!</button>
+        <div class="Groups">
+
+
+            <div id="courseGroup">
+                <h2>Course Group 1</h2>
+                <h4 id="semester1">Semester Selected: </h4>
+                <h4 id="courses">Current Courses: </h4>
+                <h4>Add Course Here!</h4>
+                Subject: <input type="text" id="inputSubject"/><br>
+                Course Number: <input type="text" id="inputNumber"><br>
+                <button id = "addCourse">add course</button>
+                <button id = "deleteCourse">delete course</button>
+                <select id = "semester">
+                    <option value="spring2023">spring-2023</option>
+                    <option value="fall2022">fall-2022</option>
+                </select>
+                <button id = "semesterSubmit">Submit</button>
+            </div>
+
+<!--            <html>-->
+<!--                <div class="createGroup"></div>-->
+<!--            </html>-->
+
+            <div class="courseGroup">
+                <button id="addGroup">Add Group Here!</button>
+            </div>
+
+
+
         </div>
-        <select id = "semester">
-            <option value="spring2023">spring-2023</option>
-            <option value="fall2022">fall-2022</option>
-        </select>
-        <button id = "semesterSubmit">Submit</button>
 <!--        <div class="dropdown">-->
 <!--            <button class="dropbtn">Choose Your Semester</button>-->
 <!--            <div class="dropdown-content">-->

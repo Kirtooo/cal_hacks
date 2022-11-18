@@ -10,7 +10,26 @@
     background-color: beige;
 }
 
-/*.courseGroup{}*/
+.Groups{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    left: 4%;
+    width: 90%;
+    background-color: lightgoldenrodyellow;
+    border: 2px solid ;
+    padding: 15px;
+    border-radius: 1rem;
+}
+
+#courseGroup{
+    width: 300px;
+    height: 600px;
+    background-color: beige;
+}
+
+/*.createGroup{}*/
 /*.addCourse{}*/
 /*.deleteCourse{}*/
 /*.courses{}*/
